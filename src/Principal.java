@@ -38,12 +38,20 @@ public class Principal {
 
                     estudantes[quatidadecadastradonepae] = estudante;
                     quatidadecadastradonepae++;
-
-
                 }
+                System.out.println("Voltando para o inicio");
 
+                aidetico = false;
             }
-
+            System.out.println("Voce gostaria de sair?");
+            System.out.println("Digite (SIM) para sair");
+            String escolto = entrada.nextLine();
+            if(escolto.equals("SIM") || escolto.equals("sim")){
+                System.out.println("Saindo do sistema..");
+                continuar = false;
+            }else {
+                System.out.println("Voltando ao inicio");
+            }
 
         }
     }
