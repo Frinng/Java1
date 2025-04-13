@@ -4,9 +4,7 @@ public class Principal {
         var entrada = new Scanner(System.in);
         boolean continuar = true;
         boolean aidetico = true;
-        var estudante = new Estudante();
         var turmane = new Turma();
-        var estudantes = new Estudante[10];
 
         while (continuar){
             System.out.println("--------------------------------------");
@@ -14,33 +12,36 @@ public class Principal {
             System.out.println("--------------------------------------");
 
             while (aidetico){
-                System.out.println("Digite o nome do estudante: ");
-                estudante.nome = entrada.nextLine();
 
-                System.out.println("Digite o telefone do estudante: ");
-                estudante.telefone = entrada.nextLine();
+                System.out.println("Quantos Alunos voce gostaria de cadastrar? ");
+                int penisnilsondasilva = Integer.parseInt(entrada.nextLine());
+                var estudantes = new Estudante[penisnilsondasilva];
 
-                System.out.println("Digite o nome do responsavel pelo estudante: ");
-                estudante.responsavelpeloaluno = entrada.nextLine();
+                int quatidadecadastradonepae = 0;
+                while (quatidadecadastradonepae != penisnilsondasilva){
+                    var estudante = new Estudante();
 
-                System.out.println("Digite o endereço do estudante: ");
-                estudante.Endereco = entrada.nextLine();
+                    System.out.println("Digite o nome do aluno: ");
+                    estudante.nome = entrada.nextLine();
 
-                System.out.println("Voce gostaria de cadastrar mais um aluno? ");
-                System.out.println("1-sim");
-                System.out.println("2-não");
-                var escolha2pqpqueodio = entrada.nextLine();
+                    System.out.println("Digite o telefone do aluno; ");
+                    estudante.telefone = entrada.nextLine();
 
-                if (escolha2pqpqueodio.equals("1") || escolha2pqpqueodio.equals("SIM") || escolha2pqpqueodio.equals("sim") ){
+                    System.out.println("Digite o endereço do aluno: ");
+                    estudante.Endereco = entrada.nextLine();
+
+                    System.out.println("Digite a idade do aluno: ");
+                    estudante.idade = Integer.parseInt(entrada.nextLine());
+
+                    System.out.println("Digite o nome do responsavel pelo aluno: ");
+                    estudante.responsavelpeloaluno = entrada.nextLine();
+
+                    estudantes[quatidadecadastradonepae] = estudante;
+                    quatidadecadastradonepae++;
 
 
-                }else {
-                    System.out.println("Saindo do sistema.");
-                    System.out.println("Saindo do sistema..");
-                    System.out.println("Saindo do sistema...");
-                    System.out.println("Saindo do sistema....");
-                    aidetico = false;
                 }
+
             }
 
 
