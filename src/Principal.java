@@ -4,7 +4,6 @@ public class Principal {
         var entrada = new Scanner(System.in);
         boolean continuar = true;
         boolean aidetico = true;
-        var turmane = new Turma();
 
         while (continuar){
             System.out.println("--------------------------------------");
